@@ -7,6 +7,8 @@ and [simPHPle](https://github.com/silversthem/simPHPle) in the back-end.
 
 ### Progress 
 Currently there's only a prototype for the design.
+Here's a screenshot of the beginning of the user interface :
+![user interface of RManager](https://raw.githubusercontent.com/silversthem/RManager/master/Prototype/prototype_screenshot.png)
 
 ---
 ## Roadmap
