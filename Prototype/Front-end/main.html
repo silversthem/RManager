@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html> <!-- Main application view -->
+<head>
+  <meta charset="utf-8"/>
+  <title>Title</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <a class="navbar-brand" style="color:black;" href="#">RManager</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div id="popupcenter"></div> <!-- Where popup appears -->
+<aside class="align-well" id="subjects"> <!-- Subjects list -->
+  <span>Tags :</span>
+  <button type="button" class="btn btn-primary"><a href="#" style="color:white;">HTML</a> <a href="#" class="rbutton"><span class="glyphicon glyphicon-remove"></span></a></button>
+  <button type="button" class="btn btn-primary"><a href="#" style="color:white;">CSS</a> <a href="#" class="rbutton"><span class="glyphicon glyphicon-remove"></span></a></button>
+  <button type="button" class="btn btn-primary"><a href="#" style="color:white;">PHP</a> <a href="#" class="rbutton"><span class="glyphicon glyphicon-remove"></span></a></button>
+  <button type="button" class="btn btn-primary"><a href="#" style="color:white;">JavaScript</a> <a href="#" class="rbutton"><span class="glyphicon glyphicon-remove"></span></a></button>
+  <!-- Adder -->
+  <a href="#" title="Ajouter une matière"><button type="button" class="btn btn-success"><strong>+</strong></button></a>
+</aside>
+<hr/>
+<aside class="align-well" id="legend"><!-- Legend -->
+  <span>Legend :</span><span class="done legend">Done</span><span class="urgent legend">Urgent</span><span class="failed legend">Failed</span>
+<content>
+  <table class="table table-striped table-bordered align-well" id="mainBoard">
+    <thead>
+      <tr><th>#</th><th>Task</th><th>Description</th><th>Plan</th><th>Progress</th><th></th></tr>
+    </thead>
+    <tbody id="tasks_table"><tr class="done">
+      <td><strong>Yesterday</strong></td>
+      <td>Learn how to code</td>
+      <td>I want to learn HTML/CSS and javascript</td>
+      <td><ol class="task-list"><li><s>Find a tutorial</s></li><li><s>Read it</s></li><li><s>Code small and crappy stuff</s></li><li><s>Code bigger and better stuff</s></li></ol></td>
+      <td><div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%;background:#9E9;">
+          </div></div></td>
+      <td><button class="btn btn-default">Share task</button>
+        <button class="btn btn-default" title="Remove the task from the current board" style="float:right;"><span class="glyphicon glyphicon-remove"></span></button></td>
+    </tr>
+      <tr class="failed">
+        <td><strong><em>[Until]</em> Today</strong></td>
+        <td>Learn how to design</td>
+        <td>I want to learn how to design stuff</td>
+        <td>
+          <ol class="task-list"><li><s>Learn the basics of css</s></li>
+            <li><s>Learn the basicsc of bootstrap</s></li>
+            <li>Design well</li></ol></td>
+        <td><div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width:67%;">
+            </div></div></td>
+        <td><button class="btn btn-default">Reschedule task</button>
+        <button class="btn btn-default" title="Remove the task from the current board" style="float:right;"><span class="glyphicon glyphicon-remove"></span></button></td>
+      </tr><tr>
+        <td><strong>Next saturday</strong></td>
+        <td>Learn JavaScript</td>
+        <td>JavaScript is awesome</td>
+        <td><em>[Task plan not yet created]</em></td>
+        <td><div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+            </div></div></td>
+        <td><button class="btn btn-default">Stop task</button><span style="margin:2px;"/><button class="btn btn-default">Pause task</button>
+        <button class="btn btn-default" title="Remove the task from the current board" style="float:right;"><span class="glyphicon glyphicon-remove"></span></button></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="6"></td></tr>
+      <tr><td colspan="6" style="text-align:center;"><button type="button" id="addDay-after" class="btn btn-default">Add task</button></td></tr>
+    </tfoot>
+  </table>
+</content>
+<hr/>
+  <!-- Core JavaScript -->
+  <script src="js/core/Core.js"></script>
+  <script src="js/core/Dom.js"></script>
+  <script src="js/core/Ajax.js"></script>
+  <script src="js/core/Form.js"></script>
+  <script src="js/core/Table.js"></script>
+  <!-- App JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

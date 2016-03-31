@@ -1,0 +1,40 @@
+.align-well {
+  margin:1%;
+  width: 98%;
+}
+
+.rbutton{
+  color:white;
+  margin-left: 10%;
+  text-align: right;
+}
+
+/* Important style for classes */
+
+.task-list s {
+  text-decoration: none;
+  color: rgba(100,100,100,0.8);
+}
+
+#popup {
+  width: 20%;
+  margin: 1%;
+  text-align: center;
+}
+
+.legend {
+  padding:5px;
+  margin:5px;
+}
+
+.done,.done td{
+  background-color: rgba(180,255,180,0.6);
+}
+
+.failed,.failed td{
+  background-color: rgba(255, 60,60, 0.55);
+}
+
+.urgent,.urgent td{
+  background-color: rgba(255, 230, 170, 0.8);
+}

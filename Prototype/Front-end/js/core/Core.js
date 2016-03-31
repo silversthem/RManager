@@ -1,0 +1,4 @@
+/*
+  Core js file
+  Useful javascript functions
+*/
