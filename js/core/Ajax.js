@@ -1,0 +1,4 @@
+/*
+  Ajax js file
+  Basic functions to send requests via AJAX
+*/

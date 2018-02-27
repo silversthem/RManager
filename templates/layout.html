@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html> <!-- Main application view -->
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ Title }} - RManager</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <a class="navbar-brand" style="color:black;" href="/">RManager</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <div>
+    <div id="popupcenter"></div> <!-- Where popup appears -->
+    <aside class="align-well" id="subjects"> <!-- Subjects list -->
+    {% block sidemenu %}
+
+    {% endblock %}
+    </aside>
+    <hr/>
+    <content class="align-well">
+    {% block content %}
+
+    {% endblock %}
+    </content>
+  </div>
+  <!-- Core JavaScript -->
+  <script src="/js/core/Core.js"></script>
+  <script src="/js/core/Dom.js"></script>
+  <script src="/js/core/Ajax.js"></script>
+  <script src="/js/core/Form.js"></script>
+  <script src="/js/core/Table.js"></script>
+  <!-- App JavaScript -->
+  <script src="/{{ script }}"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block sidemenu %}
+
+{% endblock %}
+
+{% block content %}
+<div>
+  <form method="post">
+    <p>
+      <label for="name">Task Name :</label>
+      <input type="text" name="name" id="name" class="med-text-input" value="{{ task.name }}" autofocus/>
+    </p>
+    <p>
+      <label for="description">Task Description :</label><br/>
+      <textarea class="big-textarea" name="description" id="description">{{ task.description }}</textarea>
+    </p>
+    <p>
+      <label for="tags">Tags :</label><br/>
+      <textarea class="med-textarea" name="tags" id="tags">{{ task.tags }}</textarea>
+    </p>
+    <p>
+      <label for="deadline">Deadline :</label><br/>
+      <input type="date" name="deadline" id="deadline"/>
+    </p>
+    <p>
+      <input type="hidden" name="team-n" id="team-n" value="1"/>
+      <label for="team1">Teams :</label><br/>
+      {# Team stuff #}
+      {% if edit %}
+
+      {% else %}
+      <select id="team1" name="team1">
+      {% for team in teams %}
+        <option value="{{ team.id }}">{{ team.name }}</option>
+      {% endfor %}
+      </select>
+      {% endif %}
+    </p>
+    <!-- Teams will wait, because it depends on permission -->
+    <hr/>
+    <p>
+      <label for="step1">Steps :</label><br/>
+    </p>
+    <p>
+      <input type="checkbox" name="ordered_steps" id="ordered_steps" {% if task.steps_ordered %} checked="true" {% endif %}/>
+      <label for="ordered_steps">Ordered steps</label>
+    </p>
+    <div id="steps">
+      <input type="hidden" id="steps-n" name="steps-n" value="1"/>
+      <ul id="steps_list">
+        {% if edit %}
+          {# Print list of tasks #}
+        {% else %}
+        <li id="step1" class="step">
+          <span># 1</span><span class="glyphicon glyphicon-remove" data-step="1" data-action="delete-step"></span>
+          <textarea class="small-textarea" name="step1_text" id="step1_text" placeholder="Step description"></textarea>
+          <textarea class="small-textarea" name="step1_tags" id="step1_tags" placeholder="Step tags"></textarea>
+          <button class="btn btn-default" data-step="1" data-action="insert-step" type="button">Add Step</button>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+    <p><button class="btn btn-default" type="submit">Create task</button></p>
+  </form>
+</div>
+{% endblock %}

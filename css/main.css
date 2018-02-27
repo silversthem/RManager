@@ -1,0 +1,80 @@
+.align-well {
+  display: block;
+  margin: auto;
+  width: 70%;
+  min-width: 1200px;
+  margin-bottom: 15px;
+}
+
+.rbutton{
+  color:white;
+  margin-left: 10%;
+  text-align: right;
+}
+
+/* Important style for classes */
+
+.task-list s {
+  text-decoration: none;
+  color: rgba(100,100,100,0.8);
+}
+
+#popup {
+  width: 20%;
+  margin: 1%;
+  text-align: center;
+}
+
+.legend {
+  padding:5px;
+  margin:5px;
+}
+
+.done,.done td{
+  background-color: rgba(180,255,180,0.6);
+}
+
+.paused, .paused td{
+  background-color: rgba(170, 230, 255, 0.8);
+}
+
+.failed,.failed td{
+  background-color: rgba(255, 60,60, 0.55);
+}
+
+.urgent,.urgent td{
+  background-color: rgba(255, 230, 170, 0.8);
+}
+
+/* Form elements */
+
+label[for="ordered_steps"] {
+  font-weight: normal;
+}
+
+.med-text-input {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
+.big-textarea {
+  margin: auto;
+  width: 80%;
+  height: 220px;
+  display: block;
+}
+
+.med-textarea {
+  margin: auto;
+  width: 60%;
+  height: 100px;
+  display: block;
+}
+
+.small-textarea {
+  margin: auto;
+  width: 40%;
+  height: 100px;
+  display: block;
+}
